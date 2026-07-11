@@ -1,6 +1,6 @@
 # TinyBuilds
 
-A Paper plugin that spawns scaled-down (or if you want, scaled-up) block display copies of your Minecraft builds.
+A Paper plugin and Fabric mod that spawns scaled-down (or if you want, scaled-up) block display copies of your Minecraft builds.
 
 
 ## Smarts
@@ -11,7 +11,7 @@ mods on both the server and client.
 
 ## Requirements
 
-- Paper 1.21+
+- Paper 1.21+, or Fabric on Minecraft 26.2
 - WorldEdit
 
 ## Commands
@@ -24,10 +24,12 @@ Make a WorldEdit selection of the build, stand where the copy should appear, the
 | `/tinybuilds remove <group>`                       | Remove a group and its display entities.                                                                                                             |
 | `/tinybuilds rotation <group> <speed>`             | Rotate the group around its center (radians per second, `0` to stop).                                                                                |
 
-Permission: `tinybuilds.command`
+Permission: `tinybuilds.command` (Paper) / gamemaster permission level (Fabric)
 
 ## Building
 
 ```
-mvn package
+./gradlew build
 ```
+
+Built jars can then be found in `paper/build/libs` and `fabric/build/libs`.

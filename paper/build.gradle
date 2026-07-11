@@ -1,0 +1,22 @@
+repositories {
+    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+    maven { url = 'https://maven.enginehub.org/repo/' }
+}
+
+dependencies {
+    implementation project(':common')
+    compileOnly "io.papermc.paper:paper-api:${paper_version}"
+    compileOnly "com.sk89q.worldedit:worldedit-bukkit:${worldedit_bukkit_version}"
+}
+
+processResources {
+    inputs.property 'version', version
+    filesMatching('plugin.yml') {
+        expand 'project': ['version': version]
+    }
+}
+
+jar {
+    archiveBaseName = 'tinybuilds-paper'
+    from { project(':common').sourceSets.main.output }
+}
