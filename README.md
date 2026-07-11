@@ -2,6 +2,7 @@
 
 A Paper plugin and Fabric mod that spawns scaled-down (or if you want, scaled-up) block display copies of your Minecraft builds.
 
+![img.png](img.png)
 
 ## Smarts
 
@@ -27,7 +28,6 @@ Make a WorldEdit selection of the build, stand where the copy should appear, the
 Permission: `tinybuilds.command` (Paper) / gamemaster permission level (Fabric)
 
 ## Building
-
 ```
 ./gradlew build
 ```
