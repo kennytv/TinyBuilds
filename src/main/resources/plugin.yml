@@ -1,0 +1,9 @@
+name: TinyBuilds
+version: '${project.version}'
+main: eu.kennytv.tinybuilds.TinyBuildsPlugin
+api-version: '1.21'
+depend: [WorldEdit]
+description: Spawn tiny copies of your builds.
+permissions:
+  tinybuilds.command:
+    default: op
